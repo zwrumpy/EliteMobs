@@ -5,9 +5,9 @@ import com.magmaguy.elitemobs.config.potioneffects.PotionEffectsConfigFields;
 public class AbsorptionConfig extends PotionEffectsConfigFields {
     public AbsorptionConfig() {
         super("absorption",
-                true,
+                false,
                 "Absorption",
-                2,
-                100);
+                0,
+                0);
     }
 }
