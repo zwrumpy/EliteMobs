@@ -1,6 +1,5 @@
 package com.magmaguy.elitemobs.quests.menus;
 
-import com.magmaguy.elitemobs.config.DefaultConfig;
 import com.magmaguy.elitemobs.npcs.NPCEntity;
 import com.magmaguy.elitemobs.quests.CustomQuest;
 import com.magmaguy.elitemobs.quests.Quest;
@@ -36,7 +35,7 @@ public class QuestBookMenu {
         List<TextComponent> pagesList = new ArrayList<>();
         int pageIndex = 0;
         int characterCount = 0;
-        int characterLimit = DefaultConfig.getCharacterLimitForBookMenuPages();
+        int characterLimit = 185;
         for (TextComponent textComponent : elements) {
             characterCount += ChatColor.stripColor(textComponent.getText()).length();
             if (pagesList.isEmpty()) {

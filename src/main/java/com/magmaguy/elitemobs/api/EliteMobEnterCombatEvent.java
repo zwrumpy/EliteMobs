@@ -10,7 +10,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.entity.Entity;
-import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Mob;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
@@ -42,10 +41,10 @@ public class EliteMobEnterCombatEvent extends Event {
             }
             if (!eliteEntity.isInCombatGracePeriod())
                 if (((Mob) eliteEntity.getLivingEntity()).getTarget() == null) {
-                    double followRange =  eliteEntity.getLivingEntity().getAttribute(Attribute.GENERIC_FOLLOW_RANGE).getValue();
-                    if (eliteEntity.getLivingEntity().getType().equals(EntityType.ENDER_DRAGON))
-                        followRange = 200;
-                    for (Entity entity : eliteEntity.getLivingEntity().getNearbyEntities(followRange,followRange,followRange)) {
+                    for (Entity entity : eliteEntity.getLivingEntity().getNearbyEntities(
+                            eliteEntity.getLivingEntity().getAttribute(Attribute.GENERIC_FOLLOW_RANGE).getValue(),
+                            eliteEntity.getLivingEntity().getAttribute(Attribute.GENERIC_FOLLOW_RANGE).getValue(),
+                            eliteEntity.getLivingEntity().getAttribute(Attribute.GENERIC_FOLLOW_RANGE).getValue())) {
                         if (entity instanceof Player) {
                             if (((Player) entity).getGameMode().equals(GameMode.SPECTATOR))
                                 continue;
