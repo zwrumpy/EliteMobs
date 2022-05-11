@@ -5,9 +5,9 @@ import com.magmaguy.elitemobs.config.enchantments.EnchantmentsConfigFields;
 public class DrillingConfig extends EnchantmentsConfigFields {
     public DrillingConfig() {
         super("drilling",
-                true,
+                false,
                 "Drilling",
-                4,
-                15);
+                0,
+                0);
     }
 }
