@@ -42,11 +42,11 @@ public class ArenaMenu {
                 player.closeInventory();
                 return;
             }
-            if (event.getSlot() == ArenaMenuConfig.getSpectatorItemSlot()) {
-                menus.get(player).getArenaInstance().addSpectator(player);
-                player.closeInventory();
-                return;
-            }
+//            if (event.getSlot() == ArenaMenuConfig.getSpectatorItemSlot()) {
+//                menus.get(player).getArenaInstance().addSpectator(player);
+//                player.closeInventory();
+//                return;
+//            }
         }
 
         @EventHandler
