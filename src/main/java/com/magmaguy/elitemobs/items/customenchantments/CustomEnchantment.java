@@ -36,7 +36,7 @@ public abstract class CustomEnchantment {
         new PlasmaBootsEnchantment();
         new HunterEnchantment();
         new CriticalStrikesEnchantment();
-        new DrillingEnchantment();
+        //new DrillingEnchantment();
         new IceBreakerEnchantment();
         new MeteorShowerEnchantment();
         new SummonMerchantEnchantment();
